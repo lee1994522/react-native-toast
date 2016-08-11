@@ -18,7 +18,8 @@ var optionsBuilder = function () {
 
   return {
     withMessage: function(m) {
-      message = m;
+      m = m || ''
+      message = typeof m !== 'string'?m.toString():m;
       return this;
     },
 
